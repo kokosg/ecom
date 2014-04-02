@@ -25,11 +25,7 @@
 			</ul>
 			<p>Copyright &copy; Team 10</p>
 		</footer>
-		<!-- Bootstrap core JavaScript
-    ================================================== -->
-		<!-- Placed at the end of the document so the pages load faster -->
-		<script
-			src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<!-- Bootstrap core JavaScript -->
 		<script src="bootstrap/js/bootstrap.min.js"></script>
 		<script src="bootstrap/js/docs.min.js"></script>
 </body>

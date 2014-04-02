@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,27 +10,15 @@
 
 <title>eCom Journal - Team 10</title>
 
-<!-- Bootstrap core CSS -->
+<!-- CSS -->
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<!-- Bootstrap theme -->
 <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-
-<!-- Custom styles for this template -->
 <link href="theme.css" rel="stylesheet">
 
-<!-- Just for debugging purposes. Don't actually copy this line! -->
-<!--[if lt IE 9]><script src="js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
+<body>
 
-<body role="document">
-
-	<!-- Fixed navbar -->
+<!-- Fixed navbar -->
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -70,13 +57,14 @@
 					<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
 						<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
 							<!-- ADD YOUR LOGIN FORM HERE -->
-							<form action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
+							<%@ include file="/forms/login.jsp"%>
+							<!-- <form action="[YOUR ACTION]" method="post" accept-charset="UTF-8">
 								<input id="user_username" style="margin-bottom: 15px;" type="text" name="user[username]" size="30" placeholder="username"/>
 								<input id="user_password" style="margin-bottom: 15px;" type="password" name="user[password]" size="30" placeholder="password"/>
 								<input id="user_remember_me" type="checkbox" name="user[remember_me]" value="1" />
 								<label class="string optional" for="user_remember_me">Remember me</label>
 								<input class="btn" type="submit" style="margin-bottom: 15px;" name="commit" value="Sign In" />
-							</form>
+							</form> -->
 						</div></li>
 				</ul>
 			</div>
@@ -84,4 +72,3 @@
 		</div>
 	</div>
 	<div class="container theme-showcase" role="main">
-
