@@ -13,8 +13,8 @@
 <!-- CSS -->
 <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 <link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-<link href="theme.css" rel="stylesheet">
-
+<!-- <link href="theme.css" rel="stylesheet">
+ -->
 </head>
 <body>
 
@@ -54,7 +54,8 @@
 					<button type="submit" class="btn">  <i class="glyphicon glyphicon-search"></i></button>
 				</form>
 				<ul class="nav navbar-nav pull-right">
-					<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
+				<% if (session.getAttribute("email") == null) { %>
+					<li id="login_form" class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In <strong class="caret"></strong></a>
 						<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
 							<!-- ADD YOUR LOGIN FORM HERE -->
 							<%@ include file="/forms/login.jsp"%>
@@ -65,7 +66,17 @@
 								<label class="string optional" for="user_remember_me">Remember me</label>
 								<input class="btn" type="submit" style="margin-bottom: 15px;" name="commit" value="Sign In" />
 							</form> -->
-						</div></li>
+						</div>
+					</li>
+				<% } else if (session.getAttribute("email") != null) { %>
+				<li id="login_form" class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Hello, <%=session.getAttribute("email")%> (<%=session.getAttribute("userRole")%>) <strong class="caret"></strong></a>
+						<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+							<!-- ADD functions HERE -->
+							add functions here!
+						</div>
+				</li>
+				<li><a href="Logout">Logout</a></li>	
+				<% } %>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->

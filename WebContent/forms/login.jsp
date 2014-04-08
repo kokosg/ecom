@@ -36,7 +36,26 @@ label.error {
 		});
 	});
 </script>
-<div onload="init()">
+<!-- <script type="text/javascript">
+	 $(function () {
+	        $('form').on('submit', function (e) {
+	          //$('#loading_bar').show();
+	          $.ajax({
+	            type: 'post',
+	            url: 'Login',
+	            data: $('form').serialize(),
+	            success: function (responseText) {
+	            	 $('#results').html(responseText);
+	            	 //$('#results_table').show();
+	            	 //$('#loading_bar').hide();
+	            	 //$('#login_form').hide();
+	            }
+	          });
+	          e.preventDefault();
+	        });
+	      });
+</script> -->
+<div>
 	<form name="Login Form" action="Login" id="Login-form" method="post">
 		<div class="form-group" id="err">
 			<label> Email:</label> 

@@ -27,6 +27,6 @@
 		</footer>
 		<!-- Bootstrap core JavaScript -->
 		<script src="bootstrap/js/bootstrap.min.js"></script>
-		<script src="bootstrap/js/docs.min.js"></script>
+<!-- 		<script src="bootstrap/js/docs.min.js"></script>-->
 </body>
 </html>
