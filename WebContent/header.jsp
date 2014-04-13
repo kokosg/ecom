@@ -32,7 +32,7 @@
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#">Home</a></li>
+					<li class="active"><a href="index.jsp">Home</a></li>
 					<li><a href="#about">About</a></li>
 					<li><a href="#contact">Contact</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
@@ -49,9 +49,10 @@
 				</ul>
 				<form class="navbar-form navbar-right" role="search">
 					<div class="form-group">
-						<input type="text" class="form-control" placeholder="Search">
+						<input type="text" class="form-control" placeholder="Search for Article">
 					</div>
 					<button type="submit" class="btn">  <i class="glyphicon glyphicon-search"></i></button>
+					<button type="submit" class="btn"><a href="searchServlet.jsp"> Advance </a><i class="glyphicon glyphicon-cog"></i></button>
 				</form>
 				<ul class="nav navbar-nav pull-right">
 				<% if (session.getAttribute("email") == null) { %>
