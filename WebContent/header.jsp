@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-<meta name="author" content="">
-<link rel="shortcut icon" href="ico/favicon.ico">
-
-<title>eCom Journal - Team 10</title>
-
-<!-- CSS -->
-<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-<!-- <link href="theme.css" rel="stylesheet">
- -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="ico/favicon.ico">
+	
+	<title>eCom Journal - Team 10</title>
+	
+	<!-- CSS -->
+	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="team10.css" rel="stylesheet">
 </head>
 <body>
 
@@ -33,18 +32,18 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="index.jsp">Home</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="#articles">Articles</a></li>
+					<li><a href="#about">About eCom Journal</a></li>
+					<li><a href="#contact">Contact Us</a></li>
 					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+						data-toggle="dropdown">Actions <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
+							<li><a href="#subscribe">Subscribe</a></li>
+							<li><a href="#submit">Submit Article</a></li>
 							<li><a href="#">Something else here</a></li>
 							<li class="divider"></li>
 							<li class="dropdown-header">Nav header</li>
 							<li><a href="#">Separated link</a></li>
-							<li><a href="#">One more separated link</a></li>
 						</ul></li>
 				</ul>
 				<form class="navbar-form navbar-right" role="search">
@@ -70,13 +69,13 @@
 						</div>
 					</li>
 				<% } else if (session.getAttribute("email") != null) { %>
-				<li id="login_form" class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Hello, <%=session.getAttribute("email")%> (<%=session.getAttribute("userRole")%>) <strong class="caret"></strong></a>
-						<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-							<!-- ADD functions HERE -->
-							add functions here!
-						</div>
-				</li>
-				<li><a href="Logout">Logout</a></li>	
+					<li id="login_form" class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Hello, <%=session.getAttribute("email")%> (<%=session.getAttribute("userRole")%>) <strong class="caret"></strong></a>
+							<div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+								<!-- ADD functions HERE -->
+								add functions here!
+							</div>
+					</li>
+					<li><a href="Logout">Logout</a></li>	
 				<% } %>
 				</ul>
 			</div>
